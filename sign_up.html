@@ -7,7 +7,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <title>
-    Customer Sign In
+    Sign Up
   </title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -16,7 +16,6 @@
   <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-  
   <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- CSS Files -->
   <link id="pagestyle" href="../assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
@@ -29,9 +28,8 @@
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg blur blur-rounded top-0 z-index-3 shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
           <div class="container-fluid">
-            <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3" href="../pages/dashboard.html">
-               Hello-Customer!
-              
+            <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3 " href="index.html">
+             Hello-Harvest!
             </a>
             <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon mt-2">
@@ -45,25 +43,25 @@
                 <li class="nav-item">
                   <a class="nav-link d-flex align-items-center me-2 active" aria-current="page" href="#">
                     <i class="fa fa-chart-pie opacity-6 text-dark me-1"></i>
-                    Hello-Farmer!
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link me-2" href="#">
-                    <i class="fa fa-user opacity-6 text-dark me-1"></i>
                     Home
                   </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link me-2" href="#">
-                    <i class="fas fa-user-circle opacity-6 text-dark me-1"></i>
+                    <i class="fa fa-user opacity-6 text-dark me-1"></i>
                     About us
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link me-2" href="sign-up.php">
+                  <a class="nav-link me-2" href="#">
+                    <i class="fas fa-user-circle opacity-6 text-dark me-1"></i>
+                    Services
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link me-2" href="sign_in_customer.html">
                     <i class="fas fa-key opacity-6 text-dark me-1"></i>
-                    Sign Up
+                    Sign In
                   </a>
                 </li>
               </ul>
@@ -81,12 +79,20 @@
           <div class="row">
             <div class="col-xl-4 col-lg-5 col-md-6 d-flex flex-column mx-auto">
               <div class="card card-plain mt-8">
-                <div class="card-header pb-0 text-left bg-transparent"   style="color:green">
-                  <h3 class="font-weight-bolder text-info text-gradient">Sign In</h3>
-                  <p class="mb-0" >Enter your email and password to sign in</p>
+                <div class="card-header pb-0 text-left bg-transparent">
+                  <h3 class="font-weight-bolder text-info text-gradient">Welcome!</h3>
+                  <p class="mb-0">It's quick and easy!</p>
                 </div>
                 <div class="card-body">
-                  <form method="post" action="dashboard.php">
+                  <form method="post" action="connection.php">
+                  <label>First Name</label>
+                    <div class="mb-3">
+                      <input type="text" class="form-control" placeholder="First Name" id="fname" name="fname" aria-label="First Name" aria-describedby="fname-addon">
+                    </div> 
+                   <label>Last Name</label>
+                    <div class="mb-3">
+                      <input type="text" class="form-control" placeholder="Last Name" id="lname" name="lname" aria-label="Last Name" aria-describedby="lname-addon">
+                    </div> 
                   <label>Email</label>
                     <div class="mb-3">
                       <input type="email" class="form-control" placeholder="Email" id="email" name="email" aria-label="Email" aria-describedby="email-addon">
@@ -95,15 +101,19 @@
                     <div class="mb-3">
                       <input type="password" class="form-control" placeholder="Password" id="password" name="password" aria-label="Password" aria-describedby="password-addon">
                     </div>
+
+                    <label for="User type">Select user type:</label>
+                    <div class="mb-3" >
+                      <select name="User type" id="User type" style="border-radius: 15px ">
+                        <option value="rigatoni">Customer</option>
+                      <option value="dave">Farmer</option>
+                    </select>
+                    </div> 
+
                     <div class="text-center">
-                      <button type="submit" class="btn bg-gradient-info w-100 mt-4 mb-0">Sign In</button>
+                      <button type="submit" class="btn bg-gradient-info w-100 mt-4 mb-0">Sign Up</button>
                     </div>
-                    <div class="card-footer text-center pt-0 px-lg-2 px-1">
-                  <p class="mb-4 text-sm mx-auto">
-                    <br>Don't have an account?
-                    <a href="sign-up.php" class="text-info text-gradient font-weight-bold">Sign up</a>
-                  </p>
-                </div>
+                    
                   </form>
                 </div>
 
@@ -111,7 +121,7 @@
             </div>
             <div class="col-md-6">
               <div class="oblique position-absolute top-0 h-100 d-md-block d-none me-n8">
-                <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6" style="background-image:url(https://cdn.wallpapersafari.com/11/34/wkzEt0.jpg)"></div>
+                <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6" style="background-image:url('../assets/img/curved-images/curved6.jpg')"></div>
               </div>
             </div>
           </div>
@@ -162,7 +172,9 @@
       <div class="row">
         <div class="col-8 mx-auto text-center mt-1">
           <p class="mb-0 text-secondary">
-
+            Copyright © <script>
+              document.write(new Date().getFullYear())
+            </script> Soft by Creative Tim.
           </p>
         </div>
       </div>
