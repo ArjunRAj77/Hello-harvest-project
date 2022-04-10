@@ -1,0 +1,54 @@
+.main-section-banner{
+    background-image: url("https://i.ibb.co/JnmTD12/banner.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.cart-logo{
+    background-image: "../assets/img/illustrations/shoping_cart.png";
+}
+
+.main-section-banner-elect{
+    background-image:url("https://promwad.com/sites/default/files/korpusa_banner1920px-2.png");
+    background-position: center;
+    background-size: cover;
+
+}
+
+.main-section-banner-groc{
+    background-image:url("https://moneysavingcentral.co.uk/images/food-groceries-banner.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.main-section-banner-fash{
+    background-image:url("https://www.dlapiper.com/~/media/images/insights/publications/2017/12/law_a_la_mode_website_banner.jpg?h=257&la=cs&w=759&hash=ED54AE9BA6ADD5FFF91E90475A74BD39874499D1");
+    background-position: center;
+    background-size: cover;
+}
+
+.main-section-banner-books{
+    background-image:url("https://images.squarespace-cdn.com/content/v1/5a5d1d6be9bfdf3be233b693/1517250622611-UYF6XMPB1GOW1610FTAP/recommended-books-banner.png?format=1500w");
+    background-position: center;
+    background-size: cover;
+}
+
+.main-section-banner-home{
+    background-image:url("https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2017/04/furniture-banner10.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.main-section-banner-daily{
+    background-image:url("https://www.creatopy.com/blog/wp-content/uploads/2018/05/animations-e-commerce-1024x525.png");
+    background-position: center;
+    background-size: cover;
+
+}
+
+.main-section-banner-refgoods{
+    background-image:url("https://www.watatgroup.com/wp-content/uploads/2018/05/it-solutions-banner.jpg");
+    background-position: center;
+    background-size: cover;
+
+}
