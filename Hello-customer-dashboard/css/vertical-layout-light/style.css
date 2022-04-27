@@ -30592,4 +30592,11 @@ div.tagsinput span.tag a {
   }
 }
 
+
+.main-section-banner{
+  background-image: url("https://t4.ftcdn.net/jpg/02/70/48/37/360_F_270483752_utMOlYHyqko8LLdeVdlrx5WjHqQocCbM.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
 /*# sourceMappingURL=../maps/vertical-layout-light/style.css.map */
