@@ -7,7 +7,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <title>
-    Farmer Sign Up | Hello Harvest Project
+    Organisation Sign Up | Hello Harvest Project
   </title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -82,12 +82,12 @@
             <div class="col-xl-4 col-lg-5 col-md-6 d-flex flex-column mx-auto">
               <div class="card card-plain mt-8">
                 <div class="card-header pb-0 text-left bg-transparent"   style="color:green">
-                  <h3 class="font-weight-bolder text-info text-gradient">Create a Farmer account</h3>
+                  <h3 class="font-weight-bolder text-info text-gradient">Create an Organisation Account</h3>
                   <p class="mb-0" >Enter your details to create a new account!</p>
                 </div>
                 <div class="card-body">
                   <form method="post" action="dashboard.php">
-                    <label>First Name</label>
+                    <label>Organisation First Name</label>
                     <div class="mb-3">
                       <input type="text" class="form-control" placeholder="First Name" id="firstName" name="firstName" aria-label="Email" aria-describedby="email-addon">
                     </div>
@@ -102,9 +102,14 @@
                     <label>Location</label>
                     <div class="mb-3">
                       <input type="Location" class="form-control" placeholder="Location" id="Location" name="Location" aria-label="Location" aria-describedby="email-addon">
-                    </div><label>Farm Name </label>
+                    </div>
+                    <label>Address</label>
                     <div class="mb-3">
-                      <input type="FarmName" class="form-control" placeholder="Farm Name" id="FarmName" name="FarmName" aria-label="FarmName" aria-describedby="email-addon">
+                      <input type="text" class="form-control" placeholder="Address" id="Address" name="Address" aria-label="Address" aria-describedby="email-addon">
+                    </div>
+                    <label>Mobile Number</label>
+                    <div class="mb-3">
+                      <input type="number" class="form-control" placeholder="Mobile Number" id="Mobile" name="Mobile" aria-label="Mobile" aria-describedby="email-addon">
                     </div>
                     <label>Password</label>
                     <div class="mb-3">
@@ -115,8 +120,8 @@
                     </div>
                     <div class="card-footer text-center pt-0 px-lg-2 px-1">
                   <p class="mb-4 text-sm mx-auto">
-                    <br>Need an admin account?
-                    <a href="sign-up-admin.html" class="text-info text-gradient font-weight-bold">Sign up</a>
+                    <br>Need a farmer account?
+                    <a href="sign-up-farmer.html" class="text-info text-gradient font-weight-bold">Sign up</a>
                   </p>
                 </div>
                   </form>
