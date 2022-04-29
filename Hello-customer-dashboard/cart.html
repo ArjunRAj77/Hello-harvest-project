@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Profile | Hello-Customer Dashboard</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="vendors/feather/feather.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="images/favicon.png" />
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="images/home1.png" class="mr-2" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav mr-lg-2">
+          <li class="nav-item nav-search d-none d-lg-block">
+            <div class="input-group">
+              <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+                <span class="input-group-text" id="search">
+                  <i class="icon-search"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+              <i class="icon-bell mx-0"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="ti-info-alt mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Application Error</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Just now
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning">
+                    <i class="ti-settings mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Settings</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Private message
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="ti-user mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">New user registration</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    2 days ago
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="images/faces/face28.jpg" alt="profile"/>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item">
+                <i class="ti-settings text-primary"></i>
+                Settings
+              </a>
+              <a class="dropdown-item">
+                <i class="ti-power-off text-primary"></i>
+                Logout
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-settings d-none d-lg-flex">
+            <a class="nav-link" href="#">
+              <i class="icon-ellipsis"></i>
+            </a>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel.html -->
+      <div class="theme-setting-wrapper">
+        <div id="settings-trigger"><i class="ti-settings"></i></div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close ti-close"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div>
+      </div>
+      <div id="right-sidebar" class="settings-panel">
+        <i class="settings-close ti-close"></i>
+        <ul class="nav nav-tabs border-top" id="setting-panel" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="todo-tab" data-toggle="tab" href="#todo-section" role="tab" aria-controls="todo-section" aria-expanded="true">TO DO LIST</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="chats-tab" data-toggle="tab" href="#chats-section" role="tab" aria-controls="chats-section">CHATS</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="setting-content">
+          <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
+            <div class="add-items d-flex px-3 mb-0">
+              <form class="form w-100">
+                <div class="form-group d-flex">
+                  <input type="text" class="form-control todo-list-input" placeholder="Add To-do">
+                  <button type="submit" class="add btn btn-primary todo-list-add-btn" id="add-task">Add</button>
+                </div>
+              </form>
+            </div>
+            <div class="list-wrapper px-3">
+              <ul class="d-flex flex-column-reverse todo-list">
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Team review meeting at 3.00 PM
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Prepare for presentation
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Resolve all the low priority tickets due today
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Schedule meeting for next week
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Project review
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+              </ul>
+            </div>
+            <h4 class="px-3 text-muted mt-5 font-weight-light mb-0">Events</h4>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="ti-control-record text-primary mr-2"></i>
+                <span>Feb 11 2018</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Creating component page build a js</p>
+              <p class="text-gray mb-0">The total number of sessions</p>
+            </div>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="ti-control-record text-primary mr-2"></i>
+                <span>Feb 7 2018</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Meeting with Alisa</p>
+              <p class="text-gray mb-0 ">Call Sarah Graves</p>
+            </div>
+          </div>
+          <!-- To do section tab ends -->
+          <div class="tab-pane fade" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
+            <div class="d-flex align-items-center justify-content-between border-bottom">
+              <p class="settings-heading border-top-0 mb-3 pl-3 pt-0 border-bottom-0 pb-0">Friends</p>
+              <small class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 font-weight-normal">See All</small>
+            </div>
+            <ul class="chat-list">
+              <li class="list active">
+                <div class="profile"><img src="images/faces/face1.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Thomas Douglas</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">19 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face2.jpg" alt="image"><span class="offline"></span></div>
+                <div class="info">
+                  <div class="wrapper d-flex">
+                    <p>Catherine</p>
+                  </div>
+                  <p>Away</p>
+                </div>
+                <div class="badge badge-success badge-pill my-auto mx-2">4</div>
+                <small class="text-muted my-auto">23 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face3.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Daniel Russell</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">14 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face4.jpg" alt="image"><span class="offline"></span></div>
+                <div class="info">
+                  <p>James Richardson</p>
+                  <p>Away</p>
+                </div>
+                <small class="text-muted my-auto">2 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face5.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Madeline Kennedy</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">5 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face6.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Sarah Graves</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">47 min</small>
+              </li>
+            </ul>
+          </div>
+          <!-- chat tab ends -->
+        </div>
+      </div>
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      <!-- partial:../../partials/_sidebar.html -->
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+              <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">
+                    <i class="icon-grid menu-icon"></i>
+                    <span class="menu-title"> Customer Dashboard</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  href="pages/tables/Shop.html" >
+                    <i class="icon-layout menu-icon"></i>
+                    <span class="menu-title">Shop</span>
+                    <!-- <i class="menu-arrow"></i> -->
+                  </a>
+                  <!-- <div class="collapse" id="ui-basic">
+                    <ul class="nav flex-column sub-menu">
+                      <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
+                      <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
+                      <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
+                    </ul>
+                  </div> -->
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="bulk_order.html">
+                    <i class="icon-grid menu-icon"></i>
+                    <span class="menu-title">Book Bulk orders</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="cart.html">
+                    <i class="icon-grid menu-icon"></i>
+                    <span class="menu-title"> Cart</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="customer_profile.html">
+                    <i class="icon-grid menu-icon"></i>
+                    <span class="menu-title"> My Profile</span>
+                  </a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                    <i class="icon-layout menu-icon"></i>
+                    <span class="menu-title">UI Elements</span>
+                    <i class="menu-arrow"></i>
+                  </a>
+                  <div class="collapse" id="ui-basic">
+                    <ul class="nav flex-column sub-menu">
+                      <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
+                      <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
+                      <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+                    <i class="icon-columns menu-icon"></i>
+                    <span class="menu-title">Form elements</span>
+                    <i class="menu-arrow"></i>
+                  </a>
+                  <div class="collapse" id="form-elements">
+                    <ul class="nav flex-column sub-menu">
+                      <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Basic Elements</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
+                    <i class="icon-bar-graph menu-icon"></i>
+                    <span class="menu-title">Charts</span>
+                    <i class="menu-arrow"></i>
+                  </a>
+                  <div class="collapse" id="charts">
+                    <ul class="nav flex-column sub-menu">
+                      <li class="nav-item"> <a class="nav-link" href="pages/charts/chartjs.html">ChartJs</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+                    <i class="icon-grid-2 menu-icon"></i>
+                    <span class="menu-title">Tables</span>
+                    <i class="menu-arrow"></i>
+                  </a>
+                  <div class="collapse" id="tables">
+                    <ul class="nav flex-column sub-menu">
+                      <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Basic table</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+                    <i class="icon-contract menu-icon"></i>
+                    <span class="menu-title">Icons</span>
+                    <i class="menu-arrow"></i>
+                  </a>
+                  <div class="collapse" id="icons">
+                    <ul class="nav flex-column sub-menu">
+                      <li class="nav-item"> <a class="nav-link" href="pages/icons/mdi.html">Mdi icons</a></li>
+                    </ul>
+                  </div>
+                </li> -->
+                <!-- <li class="nav-item">
+                  <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                    <i class="icon-head menu-icon"></i>
+                    <span class="menu-title">User Pages</span>
+                    <i class="menu-arrow"></i>
+                  </a>
+                  <div class="collapse" id="auth">
+                    <ul class="nav flex-column sub-menu">
+                      <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
+                      <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
+                    </ul>
+                  </div>
+                </li> -->
+                <!-- <li class="nav-item">
+                  <a class="nav-link" data-toggle="collapse" href="#error" aria-expanded="false" aria-controls="error">
+                    <i class="icon-ban menu-icon"></i>
+                    <span class="menu-title">Error pages</span>
+                    <i class="menu-arrow"></i>
+                  </a>
+                  <div class="collapse" id="error">
+                    <ul class="nav flex-column sub-menu">
+                      <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
+                      <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
+                    </ul>
+                  </div>
+                </li> -->
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/documentation/documentation.html">
+                    <i class="icon-paper menu-icon"></i>
+                    <span class="menu-title">Documentation</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        
+          
+          <div class="main h-full flex">
+            <!--main section-->
+           <div class="main-section flex-1 p-6 w-40 bg-white">
+               <div class="header">
+                   <!--Adding the title-->
+                   <h1 class="font-bold text-2xl text-gray-600 mb-6" >Shopping Cart</h1>
+                   <!--Title tables -->
+                   <div class="table-titles text-gray-600 flex font-bold">
+                       <h2 class="flex-grow">Product</h2>
+                       <h2 class="w-48">Count</h2>
+                       <h2 class="w-48">Total cost</h2>
+                       <span class="w-10"></span>
+                   </div>
+                   <!--Creating cart items-->
+                   <div class="cart-items mt-5">
+                       <!--First Item-->
+                       <div class="cart-item-1  flex items-center pb-4 border-b border-gray-150">
+                         
+                         <div class="cart-item-image w-48 h-24 bg-white p-4 rounded-lg ">
+                             <img class="w-full h-full object-contain" src="data:image/jpeg;base64,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" alt="">
+                         </div>
+                         
+                         <div class="cart-item-details flex-grow">
+                             <div class="cart-item-title font-bold text-sm text-gray-600">
+                                 Cabbage
+                             </div>
+                             <div class="cart-item-make text-sm text-gray-400">
+                                 Mr R
+                             </div>
+                         </div>
+   
+                         <div class="cart-item-counter w-48 flex items-center ">
+                             <div class="chevron-left mr-2 cursor-pointer items-center justify-center bg-gray-200 rounded flex text-black h-6 w-6">
+                                 <svg class="text-black h-100 w-100 hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                     <path fill-rule="evenodd" d="M15.707 15.707a1 1 0 01-1.414 0l-5-5a1 1 0 010-1.414l5-5a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 010 1.414zm-6 0a1 1 0 01-1.414 0l-5-5a1 1 0 010-1.414l5-5a1 1 0 011.414 1.414L5.414 10l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+                                 </svg>
+                             </div>
+                            
+                             <h4 class="text-gray-400"> x1 </h4>
+                             
+                             <div class="chevron-right ml-2 cursor-pointer items-center justify-center bg-gray-200 rounded flex text-black h-6 w-6">
+                                 <svg class="text-black h-100 w-100 hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                     <path fill-rule="evenodd" d="M10.293 15.707a1 1 0 010-1.414L14.586 10l-4.293-4.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                     <path fill-rule="evenodd" d="M4.293 15.707a1 1 0 010-1.414L8.586 10 4.293 5.707a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                 </svg> 
+                             </div>
+                         </div>
+   
+                         <div class="cart-item-total-cost w-48 font-bol text-gray-400">
+                             ₹ 50  
+                         </div>
+   
+                         <div class="cart-item-delete text-gray-4oo w-10 font-bold cursor-pointer hover:text-gray-500">
+                             <svg class="text-black h-15 w-15 hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                 <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                               </svg>
+                             
+                         </div>
+   
+                       </div>
+                       <!--cart item2-->
+                       <div class="cart-item-2  flex items-center pb-4 border-b border-gray-150">
+                         
+                         <div class="cart-item-image w-48 h-24 bg-white p-4 rounded-lg ">
+                             <img class="w-full h-full object-contain" src="data:image/jpeg;base64,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" alt="">
+                         </div>
+                         
+                         <div class="cart-item-details flex-grow">
+                             <div class="cart-item-title mr-1 font-bold text-sm text-gray-600">
+                                 Carrots   
+                             </div>
+                             <div class="cart-item-make text-sm text-gray-400">
+                                 Mr X
+                             </div>
+                         </div>
+   
+                         <div class="cart-item-counter w-48 flex items-center ">
+                             <div class="chevron-left  mr-2 cursor-pointer items-center justify-center text-gray-400 h-6 w-6 bg-gray-200 rounded flex hover:bg-gray-200">
+                                 <svg class="text-black h-100 w-100 hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                     <path fill-rule="evenodd" d="M15.707 15.707a1 1 0 01-1.414 0l-5-5a1 1 0 010-1.414l5-5a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 010 1.414zm-6 0a1 1 0 01-1.414 0l-5-5a1 1 0 010-1.414l5-5a1 1 0 011.414 1.414L5.414 10l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+                                 </svg>
+                             </div>
+                            
+                             <h4 class="text-gray-400"> x1 </h4>
+                             
+                             <div class="chevron-right ml-2 cursor-pointer items-center justify-center bg-gray-200 rounded flex text-black h-6 w-6">
+                                 <svg  class="text-black h-100 w-100 hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                     <path fill-rule="evenodd" d="M10.293 15.707a1 1 0 010-1.414L14.586 10l-4.293-4.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                     <path fill-rule="evenodd" d="M4.293 15.707a1 1 0 010-1.414L8.586 10 4.293 5.707a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                 </svg> 
+                             </div>
+                         </div>
+   
+                         <div class="cart-item-total-cost w-48 font-bol text-gray-400">
+                             ₹ 150  
+                         </div>
+   
+                         <div class="cart-item-delete text-gray-400 w-10 font-bold cursor-pointer hover:text-gray-500">
+                             <svg class="text-black h-15 w-15 hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                 <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                               </svg>
+                             
+                         </div>
+   
+                       </div>
+                   </div>
+                   
+                   <!--Full total amount-->
+                   <div class="cart-item-complete-order flex justify-end mt-5 mr-2">
+                       <div class="total-cost">
+                           <h2 class="text-gray-400">Total cost</h2>
+                           <div class="total-cost-number mr-7 text-gray-600 text-3xl font-bold">
+                             ₹ 200
+                           </div>
+                       </div>
+                       <div class="buy-now w-56 h-26 ml-2 flex items-center justify-center bg-yellow-400 rounded cursor-pointer hover:bg-yellow-600">
+                           Buy Now
+                       </div>
+                   </div>
+               </div>
+           </div>
+           
+           </div>
+       </div>
+        
+       </div>
+        <!--
+          New one
+        -->
+        <!-- <div class="row">
+          <div class="col-md-12 grid-margin stretch-card">
+            <div class="card">
+              <div class="btn-group">
+                <button type="button" class="btn btn-success" onclick="window.location.href='pages/forms/basic_elements.html'">Make a new order request</button>
+                
+              </div>
+            </div>
+          </div> -->
+          <!-- Bulk Order requests information Ends -->
+      
+      </div>
+        <!--
+          New one ends
+        -->
+
+
+
+
+    </div>
+    
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2022.  Made with love by Team Inevitables
+          </div>
+        </footer> 
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>   
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="vendors/chart.js/Chart.min.js"></script>
+  <script src="vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script src="js/dataTables.select.min.js"></script>
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="js/off-canvas.js"></script>
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="js/dashboard.js"></script>
+  <script src="js/Chart.roundedBarCharts.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>
+
