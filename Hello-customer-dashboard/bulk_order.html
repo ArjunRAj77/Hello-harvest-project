@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="vendors/feather/feather.css">
   <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
   <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
   <!-- endinject -->
   <!-- Plugin css for this page -->
   <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
@@ -293,7 +295,7 @@
       </div>
       <!-- partial -->
       <!-- partial:partials/_sidebar.html -->
-            <!-- partial:../../partials/_sidebar.html -->
+      <!-- partial:../../partials/_sidebar.html -->
             <nav class="sidebar sidebar-offcanvas" id="sidebar">
               <ul class="nav">
                 <li class="nav-item">
@@ -323,9 +325,9 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="inventory.html">
+                  <a class="nav-link" href="pages/tables/cart.html">
                     <i class="icon-grid menu-icon"></i>
-                    <span class="menu-title"> Inventory</span>
+                    <span class="menu-title"> Cart</span>
                   </a>
                 </li>
                 <li class="nav-item">
@@ -438,7 +440,7 @@
               <div class="row">
                 <div class="col-12 col-xl-8 mb-4 mb-xl-0">
                   <h3 class="font-weight-bold">Bulk Order requests</h3>
-                  <h6 class="font-weight-normal mb-0">Bulk order requests from different organisation are displayed here!  You have <span class="text-primary">3 new order requests!</span></h6>
+                  <h6 class="font-weight-normal mb-0">Manage your orders and requests here<span class="text-primary">3 new order requests!</span></h6>
                 </div>
               </div>
             </div>
@@ -470,7 +472,7 @@
                           <td>Kottayam</td>
                           <td class="font-weight-medium">
                             <div class="btn-group">
-                              <button type="button" class="btn btn-success">Pending</button>
+                              <button type="button" class="btn btn-success">New</button>
                               <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" id="dropdownMenuSplitButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="sr-only">Toggle Dropdown</span>
                               </button>
@@ -490,7 +492,7 @@
                           <td>Kottayam</td>
                           <td class="font-weight-medium">
                             <div class="btn-group">
-                              <button type="button" class="btn btn-success">Pending</button>
+                              <button type="button" class="btn btn-success">New</button>
                               <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" id="dropdownMenuSplitButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="sr-only">Toggle Dropdown</span>
                               </button>
@@ -530,15 +532,15 @@
                           <td>Kottayam</td>
                           <td class="font-weight-medium">
                             <div class="btn-group">
-                              <button type="button" class="btn btn-success">Pending</button>
-                              <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" id="dropdownMenuSplitButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <button type="button" class="btn btn-success">Completed</button>
+                              <!--<button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" id="dropdownMenuSplitButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="sr-only">Toggle Dropdown</span>
-                              </button>
-                              <div class="dropdown-menu" aria-labelledby="dropdownMenuSplitButton3">
+                              </button>-->
+                              <!--<div class="dropdown-menu" aria-labelledby="dropdownMenuSplitButton3">
                                 <h6 class="dropdown-header">Select an option</h6>
                                 <a class="dropdown-item btn-success"  href="#">Cancel Order</a>
-                                <!--<a class="dropdown-item btn-danger" href="#">Reject Order</a>-->
-                              </div>
+                                <a class="dropdown-item btn-danger" href="#">Reject Order</a>
+                              </div>-->
                             </div>
                           </td>
                         </tr>
@@ -551,6 +553,28 @@
             <!-- Bulk Order requests information Ends -->
         
         </div>
+        <!--
+          New one
+        -->
+        <div class="row">
+          <div class="col-md-12 grid-margin stretch-card">
+            <div class="card">
+              <div class="btn-group">
+                <button type="button" class="btn btn-success" onclick="window.location.href='pages/forms/basic_elements.html'">Make a new order request</button>
+                
+              </div>
+            </div>
+          </div>
+          <!-- Bulk Order requests information Ends -->
+      
+      </div>
+        <!--
+          New one ends
+        -->
+
+
+
+
           
         <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->
