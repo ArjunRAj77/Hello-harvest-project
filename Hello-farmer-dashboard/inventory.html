@@ -366,56 +366,18 @@
                         </tr>  
                       </thead>
                       <tbody>
-                        <tr>
-                          <th>1</th>
-                          <td>Onion</td>
-                          <td>Vegetable</td>
-                          <td>400 Kg</td>
-                          <td class="font-weight-bold">$36/Kg</td>
-                          <td>21 Sep 2018</td>
-                          <td class="font-weight-medium">
-                            <button type="button" class="btn btn-info btn-icon-text">
-                              Edit
-                              <i class="ti-pencil btn-icon-append"></i>                          
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th>2</th>
-                          <td>Potato</td>
-                          <td>Vegetable</td>
-                          <td>400 Kg</td>
-                          <td class="font-weight-bold">$11/Kg</td>
-                          <td>13 Jun 2018</td>
-                          <td class="font-weight-medium"> <button type="button" class="btn btn-info btn-icon-text">
-                            Edit
-                            <i class="ti-pencil btn-icon-append"></i>                          
-                          </button></td>
-                        </tr>
-                        <tr>
-                          <th>3</th>
-                          <td>Banana</td>
-                          <td>Fruit</td>
-                          <td>400 Kg</td>
-                          <td class="font-weight-bold">$55/Kg</td>
-                          <td>28 Sep 2018</td>
-                          <td class="font-weight-medium"> <button type="button" class="btn btn-info btn-icon-text">
-                            Edit
-                            <i class="ti-pencil btn-icon-append"></i>                          
-                          </button></td>
-                        </tr>
-                        <tr>
-                          <th>4</th>
-                          <td>Tomato</td>
-                          <td>Vegetable</td>
-                          <td>400 Kg</td>
-                          <td class="font-weight-bold">$52/Kg</td>
-                          <td>30 Jun 2018</td>
-                          <td class="font-weight-medium"> <button type="button" class="btn btn-info btn-icon-text">
-                            Edit
-                            <i class="ti-pencil btn-icon-append"></i>                          
-                          </button></td>
-                        </tr>
+                      <?php
+                        include "db.php";
+                
+                        $resource = $conn->query('SELECT id, itemname, itemtype, quantity, price, harvestdate FROM inventory');
+                        while ( $rows = $resource->fetch_assoc() ) {
+                            echo "<tr><td>".$rows['id']."</td><td>".$rows['itemname']."</td><td>".$rows['itemtype']."</td><td>".$rows['quantity']."</td><td>".$rows['harvestdate']."</td><td>".$rows['price']."</td></tr>";
+                        }
+                
+                        $resource->free();
+                        $conn->close();
+                
+                      ?>
                       </tbody>
                     </table>
                     <br>

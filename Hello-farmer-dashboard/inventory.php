@@ -315,7 +315,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="inventory.php">
+            <a class="nav-link" href="inventory.html">
               <i class="icon-grid menu-icon"></i>
               <span class="menu-title"> Inventory</span>
             </a>
@@ -341,7 +341,7 @@
             <div class="col-md-12 grid-margin">
               <div class="row">
                 <div class="col-12 col-xl-8 mb-4 mb-xl-0">
-                  <h3 class="font-weight-bold">Add an Inventory List</h3>
+                  <h3 class="font-weight-bold">Inventory List</h3>
                   <h6 class="font-weight-normal mb-0">The complete account of selling items from your farm! </h6>
                 </div>
               </div>
@@ -349,54 +349,45 @@
           </div>
           <div class="row">
             <div class="col-md-12 grid-margin stretch-card">
-                <div class="col-md-6 grid-margin stretch-card">
-                    <div class="card">
-                      <div class="card-body">
-                        <h4 class="card-title"> New Inventory Item</h4>
-                        <p class="card-description">
-                          Add items to your inventory!
-                        </p>
-                        <form method="post" action="../php/connectioninventory.php" class="forms-sample">
-                          <div class="form-group">
-                            <label for="exampleInputUsername1">Item name</label>
-                            <input type="text" class="form-control" id="itemname" name="itemname" placeholder="Item name">
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputITemType">Item Type</label>
-                            <select id="itemtype" name="itemtype" class="form-control">
-                                <option value="Vegetable">Vegetable</option>
-                                <option value="Fruits">Fruits</option>
-                                <option value="Grains">Grains</option>
-                                <option value="Meat">Meat</option>
-                                <option value="Diary">Diary</option>
-                                <option value="Beverges">Beverges</option>
-
-                              </select>
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputPassword1">Quantity</label>
-                            <input type="text" class="form-control" id="quantity" name="quantity" placeholder="Quantity">
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputConfirmPassword1">Price</label>
-                            <input type="text" class="form-control" id="price" name="price" placeholder="Price">
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputConfirmPassword1">Next harvest date</label>
-                            <input type="date" class="form-control" id="harvestdate" name="harvestdate" placeholder="Date">
-                          </div>
-                          <!-- <div class="form-check form-check-flat form-check-primary">
-                            <label class="form-check-label">
-                              <input type="checkbox" class="form-check-input">
-                              Remember me
-                            </label>
-                          </div> -->
-                          <button type="submit" class="btn btn-success mr-2">Submit</button>
-                          <button class="btn btn-light" >Cancel</button>
-                        </form>
-                      </div>
-                    </div>
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title mb-0"> <br>&nbsp;&nbsp;&nbsp;The Great Indian Farm</p><br><br>
+                  <div class="table-responsive">
+                    <table class="table table-striped table-borderless">
+                      <thead>
+                        <tr>
+                          <th>Sl No:</th>
+                          <th>Product</th>
+                          <th>Category</th>
+                          <th>Current Stock</th>
+                          <th>Selling Price</th>
+                          <th>Next harvest date</th>
+                          <!-- <th>Update</th> -->
+                        </tr>  
+                      </thead>
+                      <tbody>
+                      <?php
+                        include "../php/db.php";
+                
+                        $resource = $conn->query('SELECT id, itemname, itemtype, quantity, price, harvestdate FROM inventory');
+                        while ( $rows = $resource->fetch_assoc() ) {
+                            echo "<tr><td>".$rows['id']."</td><td>".$rows['itemname']."</td><td>".$rows['itemtype']."</td><td>".$rows['quantity']."</td><td>".$rows['price']."</td><td>".$rows['harvestdate']."</td></tr>";
+                        }
+                
+                        $resource->free();
+                        $conn->close();
+                
+                      ?>
+                      </tbody>
+                    </table>
+                    <br>
+                    <button type="button" class="btn btn-info btn-icon-text" onclick="window.location.href='inventory-form.html'">
+                      Add new inventory item
+                      <i class="ti-plus btn-icon-append"></i>                        
+                    </button>
                   </div>
+                </div>
+              </div>
             </div>
           </div>
         <!-- content-wrapper ends -->
