@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "Inevitables@123";
+$password = "";
 $dbname = "helloharvest";
 
 // Create connection
