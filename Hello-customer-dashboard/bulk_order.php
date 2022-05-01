@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Bulk order | Hello-Customer Dashboard</title>
+  <title>Bulk order | Hello-Farmer Dashboard</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="vendors/feather/feather.css">
   <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
@@ -319,7 +319,7 @@
                   </div> -->
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="bulk_order.php">
+                  <a class="nav-link" href="bulk_order.html">
                     <i class="icon-grid menu-icon"></i>
                     <span class="menu-title">Book Bulk orders</span>
                   </a>
@@ -439,8 +439,8 @@
             <div class="col-md-12 grid-margin">
               <div class="row">
                 <div class="col-12 col-xl-8 mb-4 mb-xl-0">
-                  <h3 class="font-weight-bold">New Request</h3>
-                  <h6 class="font-weight-normal mb-0">Enter the requirements below<span class="text-primary"></span></h6>
+                  <h3 class="font-weight-bold">Bulk Order requests</h3>
+                  <h6 class="font-weight-normal mb-0">Manage your orders and requests here<span class="text-primary">3 new order requests!</span></h6>
                 </div>
               </div>
             </div>
@@ -448,59 +448,38 @@
           <!-- Bulk Order requests information starts -->
           <div class="row">
             <div class="col-md-12 grid-margin stretch-card">
-                <div class="col-md-6 grid-margin stretch-card">
-                    <div class="card">
-                      <div class="card-body">
-                        <h4 class="card-title"> Make new order</h4>
-                        <p class="card-description">
-                          Add Details
-                        </p>
-                        <form method="post" action="../php/connectionorder.php" class="forms-sample">
-                          <div class="form-group">
-                            <label for="exampleInputUsername1">Item name</label>
-                            <input type="text" class="form-control" id="itemname" name="itemname" placeholder="Item name">
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputITemType">Item Type</label>
-                            <select id="itemtype" name="itemtype" class="form-control">
-                                <option value="Vegetable">Vegetable</option>
-                                <option value="Fruits">Fruits</option>
-                                <option value="Grains">Grains</option>
-                                <option value="Meat">Meat</option>
-                                <option value="Diary">Diary</option>
-                                <option value="Beverges">Beverges</option>
-
-                              </select>
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputPassword1">Quantity Required</label>
-                            <input type="text" class="form-control" id="quantity" name="quantity" placeholder="Quantity">
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputPassword1">Location Address</label>
-                            <input type="text" class="form-control" id="address" name="address" placeholder="Location Address">
-                          </div>
-                          <!-- <div class="form-group">
-                            <label for="exampleInputConfirmPassword1">Budget</label>
-                            <input type="password" class="form-control" id="exampleInputConfirmPassword1" placeholder="Price">
-                          </div> -->
-                          <div class="form-group">
-                            <label for="exampleInputConfirmPassword1">Request date</label>
-                            <input type="date" class="form-control" id="requestdate" name="requestdate" placeholder="Date">
-                          </div>
-                          <!-- <div class="form-check form-check-flat form-check-primary">
-                            <label class="form-check-label">
-                              <input type="checkbox" class="form-check-input">
-                              Remember me
-                            </label>
-                          </div> -->
-                          <button type="submit" class="btn btn-success mr-2">Submit</button>
-                          <button class="btn btn-light" >Cancel</button>
-                        </form>
-                      </div>
-                    </div>
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title mb-2"> &nbsp; My requests</p>
+                  <div class="table-responsive">
+                    <table class="table table-striped table-borderless">
+                      <thead>
+                        <tr>
+                          <th>Sl No.</th>
+                          <th>Product</th>
+                          <th>Quantity Required</th>
+                          <th>Date of request</th>
+                          <th>Delivery Location</th>
+                        </tr>  
+                      </thead>
+                      <tbody>
+                      <?php
+                        include "../php/db.php";
+                
+                        $resource = $conn->query('SELECT id, itemname, quantity, requestdate, address FROM bulkorder');
+                        while ( $rows = $resource->fetch_assoc() ) {
+                            echo "<tr><td>".$rows['id']."</td><td>".$rows['itemname']."</td><td>".$rows['quantity']."</td><td>".$rows['requestdate']."</td><td>".$rows['address']."</td></tr>";
+                        }
+                
+                        $resource->free();
+                        $conn->close();
+                
+                      ?>
+                      </tbody>
+                    </table>
                   </div>
-            </div>
+                </div>
+              </div>
             </div>
             <!-- Bulk Order requests information Ends -->
         
@@ -508,26 +487,21 @@
         <!--
           New one
         -->
-        <!-- <div class="row">
+        <div class="row">
           <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
               <div class="btn-group">
-                <button type="button" class="btn btn-success" onclick="window.location.href='pages/forms/basic_elements.html'">Make a new order request</button>
+                <button type="button" class="btn btn-success" onclick="window.location.href='bulk-order-form.html'">Make a new order request</button>
                 
               </div>
             </div>
-          </div> -->
+          </div>
           <!-- Bulk Order requests information Ends -->
       
       </div>
         <!--
           New one ends
         -->
-
-
-
-
-    </div>
         <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->
         <footer class="footer">
