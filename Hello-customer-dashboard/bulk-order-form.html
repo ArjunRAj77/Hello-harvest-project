@@ -319,7 +319,7 @@
                   </div> -->
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="bulk_order.html">
+                  <a class="nav-link" href="bulk_order.php">
                     <i class="icon-grid menu-icon"></i>
                     <span class="menu-title">Book Bulk orders</span>
                   </a>
@@ -425,7 +425,7 @@
                   </div>
                 </li> -->
                 <li class="nav-item">
-                  <a class="nav-link" href="documentation.html">
+                  <a class="nav-link" href="pages/documentation/documentation.html">
                     <i class="icon-paper menu-icon"></i>
                     <span class="menu-title">Documentation</span>
                   </a>
@@ -455,14 +455,14 @@
                         <p class="card-description">
                           Add Details
                         </p>
-                        <form class="forms-sample">
+                        <form method="post" action="../php/connectionorder.php" class="forms-sample">
                           <div class="form-group">
                             <label for="exampleInputUsername1">Item name</label>
-                            <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Item name">
+                            <input type="text" class="form-control" id="itemname" name="itemname" placeholder="Item name">
                           </div>
                           <div class="form-group">
                             <label for="exampleInputITemType">Item Type</label>
-                            <select id="exampleInputITemType" name="Item Type" class="form-control">
+                            <select id="itemtype" name="itemtype" class="form-control">
                                 <option value="Vegetable">Vegetable</option>
                                 <option value="Fruits">Fruits</option>
                                 <option value="Grains">Grains</option>
@@ -473,20 +473,20 @@
                               </select>
                           </div>
                           <div class="form-group">
-                            <label for="exampleInputPassword1">Quantity</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Quantity">
+                            <label for="exampleInputPassword1">Quantity Required</label>
+                            <input type="text" class="form-control" id="quantity" name="quantity" placeholder="Quantity">
                           </div>
                           <div class="form-group">
                             <label for="exampleInputPassword1">Location Address</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Quantity">
+                            <input type="text" class="form-control" id="address" name="address" placeholder="Location Address">
                           </div>
-                          <div class="form-group">
+                          <!-- <div class="form-group">
                             <label for="exampleInputConfirmPassword1">Budget</label>
                             <input type="password" class="form-control" id="exampleInputConfirmPassword1" placeholder="Price">
-                          </div>
+                          </div> -->
                           <div class="form-group">
-                            <label for="exampleInputConfirmPassword1">Delivery date</label>
-                            <input type="date" class="form-control" id="exampleDate" placeholder="Date">
+                            <label for="exampleInputConfirmPassword1">Request date</label>
+                            <input type="date" class="form-control" id="requestdate" name="requestdate" placeholder="Date">
                           </div>
                           <!-- <div class="form-check form-check-flat form-check-primary">
                             <label class="form-check-label">
@@ -500,25 +500,23 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-12 grid-margin stretch-card">
-                    <div class="col-md-6 grid-margin stretch-card">
-                        <div class="card">
-                          <div class="card-body">
-                            <h4 class="card-title"> Acceptable Bulk Order List</h4>
-                            <p class="card-description">
-                              Please select from any one of the following
-                            </p>
-                            
-                          </div>
-                        </div>
-                      </div>
-                  </div>
             </div>
-            
-          </div>
+            </div>
             <!-- Bulk Order requests information Ends -->
         
         </div>
+        <!--
+          New one
+        -->
+        <!-- <div class="row">
+          <div class="col-md-12 grid-margin stretch-card">
+            <div class="card">
+              <div class="btn-group">
+                <button type="button" class="btn btn-success" onclick="window.location.href='pages/forms/basic_elements.html'">Make a new order request</button>
+                
+              </div>
+            </div>
+          </div> -->
           <!-- Bulk Order requests information Ends -->
       
       </div>
