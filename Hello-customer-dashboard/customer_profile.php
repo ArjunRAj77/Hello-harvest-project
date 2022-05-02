@@ -456,9 +456,9 @@
                       <?php
                         include "../php/db.php";
                 
-                        $resource = $conn->query('SELECT name, location, email, farmname FROM farmer');
+                        $resource = $conn->query('SELECT name, email, address, phone FROM customer');
                         while ( $rows = $resource->fetch_assoc() ) {
-                            echo "<tr><td>".$rows['name']."</td><td>".$rows['location']."</td><td>".$rows['email']."</td><td>".$rows['farmname']."</td></tr>";
+                            echo "<tr><td>".$rows['name']."</td><td>".$rows['email']."</td><td>".$rows['address']."</td><td>".$rows['phone']."</td></tr>";
                         }
                 
                         $resource->free();
