@@ -441,15 +441,15 @@
             <div class="col-md-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <p class="card-title mb-0">Farmer Details</p>
+                  <p class="card-title mb-0">Customer Details</p>
                   <div class="table-responsive">
                     <table class="table table-striped table-borderless">
                       <thead>
                         <tr>
                           <th>Name</th>
-                          <th>Location</th>
                           <th>Email</th>
-                          <th>Farmname</th>
+                          <th>Address</th>
+                          <th>Phone</th>
                         </tr>  
                       </thead>
                       <tbody>
