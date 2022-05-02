@@ -296,7 +296,7 @@
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="index.php">
               <i class="icon-grid menu-icon"></i>
               <span class="menu-title"> Customer Dashboard</span>
             </a>
@@ -322,14 +322,14 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="customer_profile.html">
+            <a class="nav-link" href="customer_profile.php">
               <i class="icon-grid menu-icon"></i>
               <span class="menu-title"> My Profile</span>
             </a>
           </li>
           
           <li class="nav-item">
-            <a class="nav-link" href="pages/documentation/documentation.html">
+            <a class="nav-link" href="documentation.html">
               <i class="icon-paper menu-icon"></i>
               <span class="menu-title">Documentation</span>
             </a>
