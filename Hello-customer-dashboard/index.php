@@ -322,7 +322,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="customer_profile.html">
+            <a class="nav-link" href="customer_profile.php">
               <i class="icon-grid menu-icon"></i>
               <span class="menu-title"> My Profile</span>
             </a>
