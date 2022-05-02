@@ -398,7 +398,7 @@
           <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
               <div class="btn-group">
-                <button type="button" class="btn btn-success" onclick="window.location.href='bulk-order-form.html'">Make a new order request</button>
+                <button type="button" class="btn btn-success" onclick="window.location.href='bulk-order-form.html'">Accept the order request</button>
                 
               </div>
             </div>
