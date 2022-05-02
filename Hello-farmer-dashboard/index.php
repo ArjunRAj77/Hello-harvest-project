@@ -19,7 +19,7 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="css/vertical-layout-light/style.css">
   <!-- endinject -->
-  <link rel="shortcut icon" href="images/favicon.png" />
+  <link rel="shortcut icon" href="images/green-seed.png" />
 </head>
 <body>
   <div class="container-scroller">
@@ -292,11 +292,10 @@
         </div>
       </div>
       <!-- partial -->
-      <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="index.php">
               <i class="icon-grid menu-icon"></i>
               <span class="menu-title"> Farmer Dashboard</span>
             </a>
@@ -305,15 +304,7 @@
             <a class="nav-link"  href="bulk-order.php" >
               <i class="icon-layout menu-icon"></i>
               <span class="menu-title">Bulk Order Requests</span>
-              <!-- <i class="menu-arrow"></i> -->
             </a>
-            <!-- <div class="collapse" id="ui-basic">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
-              </ul>
-            </div> -->
           </li>
           <li class="nav-item">
             <a class="nav-link" href="transaction-history.html">
@@ -333,96 +324,8 @@
               <span class="menu-title"> My Profile</span>
             </a>
           </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-              <i class="icon-layout menu-icon"></i>
-              <span class="menu-title">UI Elements</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="ui-basic">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
-              </ul>
-            </div>
-          </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
-              <i class="icon-columns menu-icon"></i>
-              <span class="menu-title">Form elements</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="form-elements">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Basic Elements</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
-              <i class="icon-bar-graph menu-icon"></i>
-              <span class="menu-title">Charts</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="charts">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/charts/chartjs.html">ChartJs</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
-              <i class="icon-grid-2 menu-icon"></i>
-              <span class="menu-title">Tables</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="tables">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Basic table</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
-              <i class="icon-contract menu-icon"></i>
-              <span class="menu-title">Icons</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="icons">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/icons/mdi.html">Mdi icons</a></li>
-              </ul>
-            </div>
-          </li> -->
-          <!-- <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-              <i class="icon-head menu-icon"></i>
-              <span class="menu-title">User Pages</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="auth">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
-              </ul>
-            </div>
-          </li> -->
-          <!-- <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#error" aria-expanded="false" aria-controls="error">
-              <i class="icon-ban menu-icon"></i>
-              <span class="menu-title">Error pages</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="error">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
-              </ul>
-            </div>
-          </li> -->
-          <li class="nav-item">
-            <a class="nav-link" href="pages/documentation/documentation.html">
+            <a class="nav-link" href="documentation.html">
               <i class="icon-paper menu-icon"></i>
               <span class="menu-title">Documentation</span>
             </a>
@@ -522,48 +425,6 @@
               </div>
             </div>
           </div>
-          <!-- <div class="row">
-            <div class="col-md-6 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title">Order Details</p>
-                  <p class="font-weight-500">The total number of sessions within the date range. It is the period time a user is actively engaged with your website, page or app, etc</p>
-                  <div class="d-flex flex-wrap mb-5">
-                    <div class="mr-5 mt-3">
-                      <p class="text-muted">Order value</p>
-                      <h3 class="text-primary fs-30 font-weight-medium">12.3k</h3>
-                    </div>
-                    <div class="mr-5 mt-3">
-                      <p class="text-muted">Orders</p>
-                      <h3 class="text-primary fs-30 font-weight-medium">14k</h3>
-                    </div>
-                    <div class="mr-5 mt-3">
-                      <p class="text-muted">Users</p>
-                      <h3 class="text-primary fs-30 font-weight-medium">71.56%</h3>
-                    </div>
-                    <div class="mt-3">
-                      <p class="text-muted">Downloads</p>
-                      <h3 class="text-primary fs-30 font-weight-medium">34040</h3>
-                    </div> 
-                  </div>
-                  <canvas id="order-chart"></canvas>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                 <div class="d-flex justify-content-between">
-                  <p class="card-title">Sales Report</p>
-                  <a href="#" class="text-info">View all</a>
-                 </div>
-                  <p class="font-weight-500">The total number of sessions within the date range. It is the period time a user is actively engaged with your website, page or app, etc</p>
-                  <div id="sales-legend" class="chartjs-legend mt-4 mb-2"></div>
-                  <canvas id="sales-chart"></canvas>
-                </div>
-              </div>
-            </div>
-          </div> -->
           <div class="row">
             <div class="col-md-12 grid-margin stretch-card">
               <div class="card position-relative">
@@ -612,33 +473,6 @@
                                       </td>
                                       <td><h5 class="font-weight-bold mb-0">114 Kg</h5></td>
                                     </tr>
-                                    <!-- <tr>
-                                      <td class="text-muted">California</td>
-                                      <td class="w-100 px-0">
-                                        <div class="progress progress-md mx-4">
-                                          <div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                      </td>
-                                      <td><h5 class="font-weight-bold mb-0">664</h5></td>
-                                    </tr>
-                                    <tr>
-                                      <td class="text-muted">Maryland</td>
-                                      <td class="w-100 px-0">
-                                        <div class="progress progress-md mx-4">
-                                          <div class="progress-bar bg-primary" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                      </td>
-                                      <td><h5 class="font-weight-bold mb-0">560</h5></td>
-                                    </tr>
-                                    <tr>
-                                      <td class="text-muted">Alaska</td>
-                                      <td class="w-100 px-0">
-                                        <div class="progress progress-md mx-4">
-                                          <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                      </td>
-                                      <td><h5 class="font-weight-bold mb-0">793</h5></td>
-                                    </tr> -->
                                   </table>
                                 </div>
                               </div>
@@ -692,33 +526,6 @@
                                       </td>
                                       <td><h5 class="font-weight-bold mb-0">1150 Ltrs</h5></td>
                                     </tr>
-                                    <!-- <tr>
-                                      <td class="text-muted">Guard/td>
-                                      <td class="w-100 px-0">
-                                        <div class="progress progress-md mx-4">
-                                          <div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                      </td>
-                                      <td><h5 class="font-weight-bold mb-0">664</h5></td>
-                                    </tr>
-                                    <tr>
-                                      <td class="text-muted">Maryland</td>
-                                      <td class="w-100 px-0">
-                                        <div class="progress progress-md mx-4">
-                                          <div class="progress-bar bg-primary" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                      </td>
-                                      <td><h5 class="font-weight-bold mb-0">560</h5></td>
-                                    </tr>
-                                    <tr>
-                                      <td class="text-muted">Alaska</td>
-                                      <td class="w-100 px-0">
-                                        <div class="progress progress-md mx-4">
-                                          <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                      </td>
-                                      <td><h5 class="font-weight-bold mb-0">793</h5></td>
-                                    </tr> -->
                                   </table>
                                 </div>
                               </div>
@@ -784,24 +591,6 @@
                           <td>30 Jun 2018</td>
                           <td class="font-weight-medium"><div class="badge badge-warning">Pending</div></td>
                         </tr>
-                        <!-- <tr>
-                          <td>E-Mail Marketing</td>
-                          <td class="font-weight-bold">$781</td>
-                          <td>01 Nov 2018</td>
-                          <td class="font-weight-medium"><div class="badge badge-danger">Cancelled</div></td>
-                        </tr>
-                        <tr>
-                          <td>Referral Marketing</td>
-                          <td class="font-weight-bold">$283</td>
-                          <td>20 Mar 2018</td>
-                          <td class="font-weight-medium"><div class="badge badge-warning">Pending</div></td>
-                        </tr>
-                        <tr>
-                          <td>Social media marketing</td>
-                          <td class="font-weight-bold">$897</td>
-                          <td>26 Oct 2018</td>
-                          <td class="font-weight-medium"><div class="badge badge-success">Completed</div></td>
-                        </tr> -->
                       </tbody>
                     </table>
                   </div>
@@ -818,7 +607,7 @@
 												<div class="form-check form-check-flat">
 													<label class="form-check-label">
 														<input class="checkbox" type="checkbox">
-														Meeting with Urban Team
+														Meeting with farm association
 													</label>
 												</div>
 												<i class="remove ti-close"></i>
@@ -827,7 +616,7 @@
 												<div class="form-check form-check-flat">
 													<label class="form-check-label">
 														<input class="checkbox" type="checkbox" checked>
-														Duplicate a project for new customer
+														Seasonal product check
 													</label>
 												</div>
 												<i class="remove ti-close"></i>
@@ -836,25 +625,7 @@
 												<div class="form-check form-check-flat">
 													<label class="form-check-label">
 														<input class="checkbox" type="checkbox">
-														Project meeting with CEO
-													</label>
-												</div>
-												<i class="remove ti-close"></i>
-											</li>
-											<li class="completed">
-												<div class="form-check form-check-flat">
-													<label class="form-check-label">
-														<input class="checkbox" type="checkbox" checked>
-														Follow up of team zilla
-													</label>
-												</div>
-												<i class="remove ti-close"></i>
-											</li>
-											<li>
-												<div class="form-check form-check-flat">
-													<label class="form-check-label">
-														<input class="checkbox" type="checkbox">
-														Level up for Antony
+														Meeting with Municipal Secretory on Farm subsidiaries
 													</label>
 												</div>
 												<i class="remove ti-close"></i>
@@ -869,218 +640,6 @@
 							</div>
             </div>
           </div>
-          <!-- <div class="row">
-            <div class="col-md-4 stretch-card grid-margin">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title mb-0">Projects</p>
-                  <div class="table-responsive">
-                    <table class="table table-borderless">
-                      <thead>
-                        <tr>
-                          <th class="pl-0  pb-2 border-bottom">Places</th>
-                          <th class="border-bottom pb-2">Orders</th>
-                          <th class="border-bottom pb-2">Users</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td class="pl-0">Kentucky</td>
-                          <td><p class="mb-0"><span class="font-weight-bold mr-2">65</span>(2.15%)</p></td>
-                          <td class="text-muted">65</td>
-                        </tr>
-                        <tr>
-                          <td class="pl-0">Ohio</td>
-                          <td><p class="mb-0"><span class="font-weight-bold mr-2">54</span>(3.25%)</p></td>
-                          <td class="text-muted">51</td>
-                        </tr>
-                        <tr>
-                          <td class="pl-0">Nevada</td>
-                          <td><p class="mb-0"><span class="font-weight-bold mr-2">22</span>(2.22%)</p></td>
-                          <td class="text-muted">32</td>
-                        </tr>
-                        <tr>
-                          <td class="pl-0">North Carolina</td>
-                          <td><p class="mb-0"><span class="font-weight-bold mr-2">46</span>(3.27%)</p></td>
-                          <td class="text-muted">15</td>
-                        </tr>
-                        <tr>
-                          <td class="pl-0">Montana</td>
-                          <td><p class="mb-0"><span class="font-weight-bold mr-2">17</span>(1.25%)</p></td>
-                          <td class="text-muted">25</td>
-                        </tr>
-                        <tr>
-                          <td class="pl-0">Nevada</td>
-                          <td><p class="mb-0"><span class="font-weight-bold mr-2">52</span>(3.11%)</p></td>
-                          <td class="text-muted">71</td>
-                        </tr>
-                        <tr>
-                          <td class="pl-0 pb-0">Louisiana</td>
-                          <td class="pb-0"><p class="mb-0"><span class="font-weight-bold mr-2">25</span>(1.32%)</p></td>
-                          <td class="pb-0">14</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 stretch-card grid-margin">
-              <div class="row">
-                <div class="col-md-12 grid-margin stretch-card">
-                  <div class="card">
-                    <div class="card-body">
-                      <p class="card-title">Charts</p>
-                      <div class="charts-data">
-                        <div class="mt-3">
-                          <p class="mb-0">Data 1</p>
-                          <div class="d-flex justify-content-between align-items-center">
-                            <div class="progress progress-md flex-grow-1 mr-4">
-                              <div class="progress-bar bg-inf0" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <p class="mb-0">5k</p>
-                          </div>
-                        </div>
-                        <div class="mt-3">
-                          <p class="mb-0">Data 2</p>
-                          <div class="d-flex justify-content-between align-items-center">
-                            <div class="progress progress-md flex-grow-1 mr-4">
-                              <div class="progress-bar bg-info" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <p class="mb-0">1k</p>
-                          </div>
-                        </div>
-                        <div class="mt-3">
-                          <p class="mb-0">Data 3</p>
-                          <div class="d-flex justify-content-between align-items-center">
-                            <div class="progress progress-md flex-grow-1 mr-4">
-                              <div class="progress-bar bg-info" role="progressbar" style="width: 48%" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <p class="mb-0">992</p>
-                          </div>
-                        </div>
-                        <div class="mt-3">
-                          <p class="mb-0">Data 4</p>
-                          <div class="d-flex justify-content-between align-items-center">
-                            <div class="progress progress-md flex-grow-1 mr-4">
-                              <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <p class="mb-0">687</p>
-                          </div>
-                        </div>
-                      </div>  
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-12 stretch-card grid-margin grid-margin-md-0">
-                  <div class="card data-icon-card-primary">
-                    <div class="card-body">
-                      <p class="card-title text-white">Number of Meetings</p>                      
-                      <div class="row">
-                        <div class="col-8 text-white">
-                          <h3>34040</h3>
-                          <p class="text-white font-weight-500 mb-0">The total number of sessions within the date range.It is calculated as the sum . </p>
-                        </div>
-                        <div class="col-4 background-icon">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 stretch-card grid-margin">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title">Notifications</p>
-                  <ul class="icon-data-list">
-                    <li>
-                      <div class="d-flex">
-                        <img src="images/faces/face1.jpg" alt="user">
-                        <div>
-                          <p class="text-info mb-1">Isabella Becker</p>
-                          <p class="mb-0">Sales dashboard have been created</p>
-                          <small>9:30 am</small>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="d-flex">
-                        <img src="images/faces/face2.jpg" alt="user">
-                        <div>
-                          <p class="text-info mb-1">Adam Warren</p>
-                          <p class="mb-0">You have done a great job #TW111</p>
-                          <small>10:30 am</small>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="d-flex">
-                      <img src="images/faces/face3.jpg" alt="user">
-                     <div>
-                      <p class="text-info mb-1">Leonard Thornton</p>
-                      <p class="mb-0">Sales dashboard have been created</p>
-                      <small>11:30 am</small>
-                     </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="d-flex">
-                        <img src="images/faces/face4.jpg" alt="user">
-                        <div>
-                          <p class="text-info mb-1">George Morrison</p>
-                          <p class="mb-0">Sales dashboard have been created</p>
-                          <small>8:50 am</small>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="d-flex">
-                        <img src="images/faces/face5.jpg" alt="user">
-                        <div>
-                        <p class="text-info mb-1">Ryan Cortez</p>
-                        <p class="mb-0">Herbs are fun and easy to grow.</p>
-                        <small>9:00 am</small>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title">Advanced Table</p>
-                  <div class="row">
-                    <div class="col-12">
-                      <div class="table-responsive">
-                        <table id="example" class="display expandable-table" style="width:100%">
-                          <thead>
-                            <tr>
-                              <th>Quote#</th>
-                              <th>Product</th>
-                              <th>Business type</th>
-                              <th>Policy holder</th>
-                              <th>Premium</th>
-                              <th>Status</th>
-                              <th>Updated at</th>
-                              <th></th>
-                            </tr>
-                          </thead>
-                      </table>
-                      </div>
-                    </div>
-                  </div>
-                  </div>
-                </div>
-
-                
-              </div>
-            </div>
-        </div> -->
         <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->
         <footer class="footer">

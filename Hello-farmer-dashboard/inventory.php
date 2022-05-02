@@ -20,7 +20,7 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="css/vertical-layout-light/style.css">
   <!-- endinject -->
-  <link rel="shortcut icon" href="images/favicon.png" />
+  <link rel="shortcut icon" href="images/green-seed.png" />
 </head>
 <body>
   <div class="container-scroller">
@@ -297,13 +297,13 @@
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="index.php">
               <i class="icon-grid menu-icon"></i>
               <span class="menu-title"> Farmer Dashboard</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"  href="bulk-order.html" >
+            <a class="nav-link"  href="bulk-order.php" >
               <i class="icon-layout menu-icon"></i>
               <span class="menu-title">Bulk Order Requests</span>
             </a>
@@ -315,7 +315,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="inventory.html">
+            <a class="nav-link" href="inventory.php">
               <i class="icon-grid menu-icon"></i>
               <span class="menu-title"> Inventory</span>
             </a>
@@ -327,7 +327,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/documentation/documentation.html">
+            <a class="nav-link" href="documentation.html">
               <i class="icon-paper menu-icon"></i>
               <span class="menu-title">Documentation</span>
             </a>
